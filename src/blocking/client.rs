@@ -193,7 +193,7 @@ impl Spotify {
                 builder
             };
 
-            builder.send().unwrap()
+            builder.send()?
         };
 
         let mut buf = String::new();
