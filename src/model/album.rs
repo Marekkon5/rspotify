@@ -63,6 +63,7 @@ pub struct FullAlbum {
     #[serde(rename = "type")]
     pub _type: Type,
     pub uri: String,
+    pub label: Option<String>
 }
 
 /// Full Albums
