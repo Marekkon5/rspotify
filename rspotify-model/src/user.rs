@@ -7,7 +7,7 @@ use std::collections::HashMap;
 use crate::{Country, Followers, Image, SubscriptionLevel, UserId};
 
 /// Public user object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct PublicUser {
     pub display_name: Option<String>,
     pub external_urls: HashMap<String, String>,
@@ -19,7 +19,7 @@ pub struct PublicUser {
 }
 
 /// Private user object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct PrivateUser {
     pub country: Option<Country>,
     pub display_name: Option<String>,

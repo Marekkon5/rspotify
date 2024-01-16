@@ -16,7 +16,7 @@ pub struct SimplifiedArtist {
 }
 
 /// Full Artist Object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FullArtist {
     pub external_urls: HashMap<String, String>,
     pub followers: Followers,
@@ -25,7 +25,7 @@ pub struct FullArtist {
     pub id: ArtistId<'static>,
     pub images: Vec<Image>,
     pub name: String,
-    pub popularity: u32,
+    pub popularity: f32,
 }
 
 /// Intermediate full artist object wrapped by `Vec`

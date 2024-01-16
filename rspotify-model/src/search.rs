@@ -8,7 +8,7 @@ use crate::{
 };
 
 /// Search for playlists
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SearchPlaylists {
     pub playlists: Page<SimplifiedPlaylist>,
 }
@@ -21,7 +21,7 @@ pub struct SearchAlbums {
 
 /// Search for artists
 ///
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SearchArtists {
     pub artists: Page<FullArtist>,
 }
@@ -45,7 +45,7 @@ pub struct SearchEpisodes {
 }
 
 /// Search result of any kind
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub enum SearchResult {
     #[serde(rename = "playlists")]
     Playlists(Page<SimplifiedPlaylist>),

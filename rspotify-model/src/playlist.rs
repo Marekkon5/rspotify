@@ -21,7 +21,7 @@ pub struct PlaylistTracksRef {
 }
 
 /// Simplified playlist object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SimplifiedPlaylist {
     pub collaborative: bool,
     pub external_urls: HashMap<String, String>,
@@ -36,7 +36,7 @@ pub struct SimplifiedPlaylist {
 }
 
 /// Full playlist object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FullPlaylist {
     pub collaborative: bool,
     pub description: Option<String>,
@@ -53,7 +53,7 @@ pub struct FullPlaylist {
 }
 
 /// Playlist track object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct PlaylistItem {
     pub added_at: Option<DateTime<Utc>>,
     pub added_by: Option<PublicUser>,
@@ -62,7 +62,7 @@ pub struct PlaylistItem {
 }
 
 /// Featured playlists object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FeaturedPlaylists {
     pub message: String,
     pub playlists: Page<SimplifiedPlaylist>,

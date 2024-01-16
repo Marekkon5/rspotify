@@ -32,11 +32,11 @@ pub use {
 use serde::{Deserialize, Serialize};
 
 /// Followers object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Followers {
     // This field will always set to null, as the Web API does not support it at the moment.
     // pub href: Option<String>,
-    pub total: u32,
+    pub total: f32,
 }
 
 /// A full track object or a full episode object
