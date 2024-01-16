@@ -3,7 +3,7 @@ use strum::IntoStaticStr;
 
 /// ISO 3166-1 alpha-2 country code, from
 /// [country-list](https://datahub.io/core/country-list)
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 pub enum Country {
     #[strum(serialize = "AF")]
     #[serde(rename = "AF")]

@@ -8,7 +8,7 @@ use crate::{
 };
 
 /// Copyright object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Copyright {
     pub text: String,
     #[serde(rename = "type")]
@@ -16,7 +16,7 @@ pub struct Copyright {
 }
 
 /// Simplified show object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SimplifiedShow {
     pub available_markets: Vec<String>,
     pub copyrights: Vec<Copyright>,
@@ -40,14 +40,14 @@ pub struct SeversalSimplifiedShows {
 }
 
 /// Saved show object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Show {
     pub added_at: String,
     pub show: SimplifiedShow,
 }
 
 /// Full show object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FullShow {
     pub available_markets: Vec<String>,
     pub copyrights: Vec<Copyright>,
@@ -66,7 +66,7 @@ pub struct FullShow {
 }
 
 /// Simplified episode object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SimplifiedEpisode {
     pub audio_preview_url: Option<String>,
     pub description: String,
@@ -91,7 +91,7 @@ pub struct SimplifiedEpisode {
 }
 
 /// Full episode object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FullEpisode {
     pub audio_preview_url: Option<String>,
     pub description: String,
@@ -123,7 +123,7 @@ pub struct EpisodesPayload {
 }
 
 /// Resume point object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct ResumePoint {
     pub fully_played: bool,
     #[serde(with = "duration_ms", rename = "resume_position_ms")]

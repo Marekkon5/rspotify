@@ -7,7 +7,7 @@ use std::collections::HashMap;
 use crate::{ArtistId, CursorBasedPage, Followers, Image};
 
 /// Simplified Artist Object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct SimplifiedArtist {
     pub external_urls: HashMap<String, String>,
     pub href: Option<String>,

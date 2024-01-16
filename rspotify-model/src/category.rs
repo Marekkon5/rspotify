@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use crate::{Image, Page};
 
 /// Category object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Category {
     pub href: String,
     pub icons: Vec<Image>,

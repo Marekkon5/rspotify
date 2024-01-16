@@ -3,7 +3,7 @@ use strum::{Display, EnumString, IntoStaticStr};
 
 /// Copyright type: `C` = the copyright, `P` = the sound recording (performance)
 /// copyright.
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 pub enum CopyrightType {
     #[strum(serialize = "P")]
     #[serde(rename = "P")]
@@ -14,7 +14,7 @@ pub enum CopyrightType {
 }
 
 /// Album type: `album`, `single`, `appears_on`, `compilation`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum AlbumType {
@@ -26,7 +26,7 @@ pub enum AlbumType {
 
 /// Type: `artist`, `album`, `track`, `playlist`, `show` or `episode`
 #[derive(
-    Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, Display, EnumString, IntoStaticStr,
+    Clone, Serialize, Deserialize, Copy, PartialEq, Debug, Display, EnumString, IntoStaticStr,
 )]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
@@ -43,7 +43,7 @@ pub enum Type {
 }
 
 /// Additional typs: `track`, `episode`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum AdditionalType {
@@ -52,7 +52,7 @@ pub enum AdditionalType {
 }
 
 /// Currently playing type: `track`, `episode`, `ad`, `unknown`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum CurrentlyPlayingType {
@@ -65,7 +65,7 @@ pub enum CurrentlyPlayingType {
 }
 
 /// Type for search: `artist`, `album`, `track`, `playlist`, `show`, `episode`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum SearchType {
@@ -80,7 +80,7 @@ pub enum SearchType {
 /// The user's Spotify subscription level: `premium`, `free`
 ///
 /// (The subscription level "open" can be considered the same as "free".)
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum SubscriptionLevel {
@@ -90,7 +90,7 @@ pub enum SubscriptionLevel {
 }
 
 /// Device Type: `computer`, `smartphone`, `speaker`, `TV`
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, IntoStaticStr)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, IntoStaticStr)]
 #[strum(serialize_all = "snake_case")]
 pub enum DeviceType {
     Computer,
@@ -117,7 +117,7 @@ pub enum DeviceType {
 }
 
 /// Recommendations seed type
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, IntoStaticStr)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, IntoStaticStr)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum RecommendationsSeedType {
     Artist,

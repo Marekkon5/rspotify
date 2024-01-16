@@ -40,7 +40,7 @@ pub struct Followers {
 }
 
 /// A full track object or a full episode object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 #[serde(untagged)]
 pub enum PlayableItem {
     Track(track::FullTrack),

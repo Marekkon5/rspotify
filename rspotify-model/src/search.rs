@@ -14,7 +14,7 @@ pub struct SearchPlaylists {
 }
 
 /// Search for albums
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct SearchAlbums {
     pub albums: Page<SimplifiedAlbum>,
 }
@@ -27,19 +27,19 @@ pub struct SearchArtists {
 }
 
 /// Search item
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SearchTracks {
     pub tracks: Page<FullTrack>,
 }
 
 /// Search for shows
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SearchShows {
     pub shows: Page<SimplifiedShow>,
 }
 
 /// Search for episodes
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SearchEpisodes {
     pub episodes: Page<SimplifiedEpisode>,
 }

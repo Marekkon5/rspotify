@@ -3,9 +3,9 @@
 use serde::{Deserialize, Serialize};
 
 /// Image object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Image {
-    pub height: Option<u32>,
+    pub height: Option<f32>,
     pub url: String,
-    pub width: Option<u32>,
+    pub width: Option<f32>,
 }

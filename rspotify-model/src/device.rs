@@ -2,7 +2,7 @@ use crate::DeviceType;
 use serde::{Deserialize, Serialize};
 
 /// Device object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Device {
     pub id: Option<String>,
     pub is_active: bool,

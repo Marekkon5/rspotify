@@ -8,13 +8,13 @@ use std::collections::HashMap;
 use crate::{Followers, Image, Page, PlayableItem, PlaylistId, PublicUser};
 
 /// Playlist result object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct PlaylistResult {
     pub snapshot_id: String,
 }
 
 /// Playlist Track Reference Object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct PlaylistTracksRef {
     pub href: String,
     pub total: u32,

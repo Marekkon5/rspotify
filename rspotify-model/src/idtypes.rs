@@ -106,7 +106,7 @@ use crate::Type;
 /// Spotify ID or URI parsing error
 ///
 /// See also [`Id`] for details.
-#[derive(Debug, PartialEq, Eq, Clone, Copy, Display, Error)]
+#[derive(Debug, PartialEq, Clone, Copy, Display, Error)]
 pub enum IdError {
     /// Spotify URI prefix is not `spotify:` or `spotify/`.
     InvalidPrefix,
@@ -200,7 +200,7 @@ macro_rules! define_idtypes {
                 docs][`crate::idtypes`] for more information. "
             )]
             #[repr(transparent)]
-            #[derive(Clone, Debug, PartialEq, Eq, Serialize, Hash)]
+            #[derive(Clone, Debug, PartialEq, Serialize, Hash)]
             pub struct $name<'a>(Cow<'a, str>);
 
             impl<'a> $name<'a> {

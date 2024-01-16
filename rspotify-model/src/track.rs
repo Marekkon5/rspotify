@@ -11,7 +11,7 @@ use crate::{
 };
 
 /// Full track object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct FullTrack {
     pub album: SimplifiedAlbum,
     pub artists: Vec<SimplifiedArtist>,
@@ -40,7 +40,7 @@ pub struct FullTrack {
 }
 
 /// Track link object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct TrackLink {
     pub external_urls: HashMap<String, String>,
     pub href: String,
@@ -57,7 +57,7 @@ pub struct FullTracks {
 ///
 /// `is_playable`, `linked_from` and `restrictions` will only be present when
 /// relinking is applied.
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SimplifiedTrack {
     pub artists: Vec<SimplifiedArtist>,
     pub available_markets: Option<Vec<String>>,
@@ -79,7 +79,7 @@ pub struct SimplifiedTrack {
 }
 
 /// Saved track object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct SavedTrack {
     pub added_at: DateTime<Utc>,
     pub track: FullTrack,

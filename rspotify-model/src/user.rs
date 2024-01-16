@@ -34,7 +34,7 @@ pub struct PrivateUser {
 }
 
 /// Explicit content setting object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct ExplicitContent {
     pub filter_enabled: bool,
     pub filter_locked: bool,

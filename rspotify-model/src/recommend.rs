@@ -6,14 +6,14 @@ use strum::IntoStaticStr;
 use crate::{RecommendationsSeedType, SimplifiedTrack};
 
 /// Recommendations object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Recommendations {
     pub seeds: Vec<RecommendationsSeed>,
     pub tracks: Vec<SimplifiedTrack>,
 }
 
 /// Recommendations seed object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct RecommendationsSeed {
     #[serde(rename = "afterFilteringSize")]
     pub after_filtering_size: u32,

@@ -11,7 +11,7 @@ use crate::{
 };
 
 /// Context object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Context {
     /// The URI may be of any type, so it's not parsed into a [`crate::Id`]
     pub uri: String,
@@ -22,7 +22,7 @@ pub struct Context {
 }
 
 /// Currently playing object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct CurrentlyPlayingContext {
     pub context: Option<Context>,
     #[serde(with = "millisecond_timestamp")]
@@ -36,7 +36,7 @@ pub struct CurrentlyPlayingContext {
     pub actions: Actions,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct CurrentPlaybackContext {
     pub device: Device,
     pub repeat_state: RepeatState,
@@ -52,14 +52,14 @@ pub struct CurrentPlaybackContext {
     pub currently_playing_type: CurrentlyPlayingType,
     pub actions: Actions,
 }
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct CurrentUserQueue {
     pub currently_playing: Option<PlayableItem>,
     pub queue: Vec<PlayableItem>,
 }
 
 /// Actions object
-#[derive(Clone, Debug, Serialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, PartialEq, Default)]
 pub struct Actions {
     pub disallows: Vec<DisallowKey>,
 }

@@ -18,7 +18,7 @@ use serde::{Deserialize, Serialize};
 /// Spotify access token information
 ///
 /// [Reference](https://developer.spotify.com/documentation/general/guides/authorization/)
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Token {
     /// An access token that can be provided in subsequent calls
     pub access_token: String,

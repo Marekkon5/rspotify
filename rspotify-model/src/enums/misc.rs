@@ -34,7 +34,7 @@ pub enum TimeRange {
 }
 
 /// Repeat state: `track`, `context` or `off`.
-#[derive(Clone, Debug, Copy, Serialize, Deserialize, PartialEq, Eq, IntoStaticStr)]
+#[derive(Clone, Debug, Copy, Serialize, Deserialize, PartialEq, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum RepeatState {
@@ -44,7 +44,7 @@ pub enum RepeatState {
 }
 
 /// Type for `include_external`: `audio`.
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum IncludeExternal {
@@ -52,7 +52,7 @@ pub enum IncludeExternal {
 }
 
 /// Date precision: `year`, `month`, `day`.
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum DatePrecision {
@@ -62,7 +62,7 @@ pub enum DatePrecision {
 }
 
 /// The reason for the restriction: `market`, `product`, `explicit`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 #[serde(rename_all = "snake_case")]
 #[strum(serialize_all = "snake_case")]
 pub enum RestrictionReason {
@@ -75,7 +75,7 @@ pub enum RestrictionReason {
 ///
 /// This field will contain a 0 for `minor`, a 1 for `major` or a -1 for `no
 /// result`
-#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Eq, Debug, IntoStaticStr)]
+#[derive(Clone, Serialize, Deserialize, Copy, PartialEq, Debug, IntoStaticStr)]
 pub enum Modality {
     Minor = 0,
     Major = 1,
@@ -86,7 +86,7 @@ pub enum Modality {
 ///
 /// `FromToken` is the same thing as setting the market parameter to the user's
 /// country.
-#[derive(Clone, Copy, Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, Serialize, Deserialize, PartialEq)]
 pub enum Market {
     Country(Country),
     FromToken,
@@ -102,7 +102,7 @@ impl From<Market> for &'static str {
 }
 
 /// Time limits in miliseconds (unix timestamps)
-#[derive(Clone, Debug, Serialize, Deserialize, Copy, PartialEq, Eq)]
+#[derive(Clone, Debug, Serialize, Deserialize, Copy, PartialEq)]
 pub enum TimeLimits {
     Before(DateTime<Utc>),
     After(DateTime<Utc>),

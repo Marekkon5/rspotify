@@ -3,7 +3,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Paging object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Page<T> {
     pub href: String,
     pub items: Vec<T>,
@@ -15,7 +15,7 @@ pub struct Page<T> {
 }
 
 /// Cursor-based paging object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct CursorBasedPage<T> {
     pub href: String,
     pub items: Vec<T>,
@@ -28,7 +28,7 @@ pub struct CursorBasedPage<T> {
 }
 
 /// Cursor object
-#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq, Default)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Default)]
 pub struct Cursor {
     pub after: Option<String>,
 }
